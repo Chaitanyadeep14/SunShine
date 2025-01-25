@@ -1,0 +1,192 @@
+/* General Navbar Styles */
+/* Apply Montserrat Globally */
+body, main, header, footer, nav, ul, li, a, p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 0.5rem 1rem; /* Adjust padding for a slimmer navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    position: fixed; /* Fix position at the top */
+    width: 100%;
+    top: 0;
+    z-index: 10; /* Keeps navbar on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    height: 50px; /* Set consistent height */
+}
+
+header .logo img {
+    max-height: 50px; /* Resize the logo to fit */
+    max-width: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+    list-style: none;
+    margin: 40px;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* General Navbar Link Styles */
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    position: relative; /* Required for the pseudo-element positioning */
+    display: inline-block;
+    overflow: hidden; /* Ensures the animation stays within the link */
+}
+
+nav ul li a::after {
+    content: ""; /* Creates the underline */
+    position: absolute;
+    bottom: 0; /* Aligns the underline at the bottom of the text */
+    left: 0;
+    width: 0%; /* Start with no underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: #EC2027; /* Underline color */
+    transition: width 0.4s ease-in-out; /* Smooth animation for the underline */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expands the underline on hover */
+}
+
+nav ul li a:hover {
+    color: #EC2027; /* Optional: Change text color on hover */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white; /* Light text for visibility */
+    text-align: center;
+    padding: 1rem 0;
+    position: re; /* Fix position at the bottom */
+    width: 100%;
+    bottom: 0;
+    z-index: 10; /* Keeps footer on top of content */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 20px;
+    height: 15px;
+    position: absolute; /* Fix the position */
+    right: 20px; /* Ensure the hamburger stays inside the viewport */
+    top: 50%; /* Align vertically with the navbar */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    z-index: 11; /* Ensure it's on top of other elements */
+}
+
+.hamburger .line {
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    nav {
+        display: block; /* Ensure it's treated as block for dropdown */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.95); /* Slightly stronger transparency */
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        overflow: hidden; /* Prevent content from spilling out */
+        max-height: 0; /* Initially collapsed */
+        transition: max-height 1s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth and slow dropdown */
+    }
+
+    nav.active {
+        max-height: 400px; /* Adjust to fit all links */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        opacity: 0;
+        transform: translateY(-20px); /* Larger slide for smooth effect */
+        transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 1, 0.5, 1); /* Slow link animation */
+    }
+
+    nav.active ul li {
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
+    nav.active ul li a {
+        color: #EC2027; /* Red links in the dropdown */
+    }
+
+    .hamburger {
+        display: flex;
+        margin-right: 30px;
+    }
+
+    /* Hamburger to Cross Transition */
+    .hamburger.open .line:nth-child(1) {
+        transform: translateY(5px) rotate(45deg); /* Top line moves and rotates */
+    }
+
+    .hamburger.open .line:nth-child(2) {
+        opacity: 0; /* Middle line disappears */
+    }
+
+    .hamburger.open .line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg); /* Bottom line moves and rotates */
+    }
+}
+
+/* Flexbox Layout for Body */
+body {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    min-height: 100vh; /* Ensure the body spans the full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Content Area */
+main {
+    flex: 1; /* Take up available space between header and footer */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
