@@ -117,6 +117,86 @@
     </div>
 </section>
 
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2>What Our Customers Say?</h2>
+
+    <div class="testimonial-slider">
+        <button class="prev-btn">&#10094;</button>
+
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <div class="profile-placeholder">
+                    <img src="assets/icon.png" alt="Customer 1">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Customer 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="profile-placeholder">
+                    <img src="assets/icon.png" alt="Customer 2">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Customer 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="rating">★★★★☆</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="profile-placeholder">
+                    <img src="assets/icon.png" alt="Customer 3">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Customer 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="profile-placeholder">
+                    <img src="assets/icon.png" alt="Customer 3">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Customer 4</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="profile-placeholder">
+                    <img src="assets/icon.png" alt="Customer 3">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Customer 5</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="profile-placeholder">
+                    <img src="assets/icon.png" alt="Customer 3">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Customer 6</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="next-btn">&#10095;</button>
+    </div>
+</section>
+
+
     <!-- Footer -->
     <div id="footer-container"></div>
 
@@ -142,6 +222,26 @@
                 updateCount();
             });
         });
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.querySelector(".testimonial-container");
+            const prevButton = document.querySelector(".prev-btn");
+            const nextButton = document.querySelector(".next-btn");
+        
+            const cardWidth = document.querySelector(".testimonial-card").offsetWidth + 20; // Card width + gap
+            const slideAmount = cardWidth * 3; // Slide 3 cards per click
+        
+            prevButton.addEventListener("click", function () {
+                container.scrollBy({ left: -slideAmount, behavior: "smooth" });
+            });
+        
+            nextButton.addEventListener("click", function () {
+                container.scrollBy({ left: slideAmount, behavior: "smooth" });
+            });
+        });
+        
     </script>
 
 </body>

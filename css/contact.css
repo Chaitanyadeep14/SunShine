@@ -1,55 +1,296 @@
-/* General Styles for the Contact Us Page */
-main {
-    padding: 20px;
-    background-color: #ffffff;
+/* ============================
+   🌟 General Styling
+=============================== */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Main Layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
     color: #333;
+    background-color: #f9f9f9;
 }
 
-main h1 {
+/* ============================
+   🌟 Hero Section
+=============================== */
+.hero {
+    margin: 0;
+    padding: 0;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../assets/contact-hero.png") no-repeat center center/cover;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    margin-bottom: 20px;
-    color: #EC2027;
-    font-weight: 600;
+    padding: 0;
+    margin: 0;
 }
 
-main p {
-    text-align: center;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    font-weight: 400;
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+    color: white;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
+/* ============================
+   🌟 Contact Section
+=============================== */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px;
+    gap: 40px;
+    background-color: transparent;
+    margin: 40px;
+    border-radius: 15px;
+}
+
+.contact-content {
+    width: 55%;
+}
+
+.contact-content h1 {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.contact-content h1 span {
+    color: #000;
+}
+
+.contact-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    width: 600px;
+    line-height: 1.6;
+}
+
+/* ============================
+   🌟 Contact Details
+=============================== */
+.contact-details {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
     gap: 15px;
+    padding: 10px 0;
 }
 
-form label {
-    font-size: 1em;
-    margin-bottom: 5px;
-    font-weight: 500; /* Medium weight for form labels */
+.detail i {
+    font-size: 1.3rem;
+    color: #000;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-form input, form textarea, form button {
-    padding: 10px;
-    font-size: 1em;
-    font-family: 'Montserrat', Arial, sans-serif; /* Explicitly set the font for inputs */
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.detail div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-form button {
-    background-color: #EC2027;
-    color: #fff;
+.detail h3 {
+    font-size: 1rem;
+    color: #777;
+    margin: 0;
     font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
 }
 
-form button:hover {
-    background-color: #d41d24;
+.detail p {
+    font-size: 1.4rem;
+    color: #8B0000;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+/* ============================
+   🌟 Map Section
+=============================== */
+.map-section {
+    width: 35%;
+}
+
+.map-container {
+    background-color: #FFD9E0;
+    padding: 20px;
+    height: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================
+   🌟 Responsive Design
+=============================== */
+
+/* Large screens (desktops and laptops) */
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .contact-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-content p {
+        width: 100%;
+    }
+
+    .map-container {
+        height: 450px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+    .contact-section {
+        flex-direction: column;
+        padding: 40px;
+        margin: 30px;
+        gap: 30px;
+    }
+
+    .contact-content,
+    .map-section {
+        width: 100%;
+    }
+
+    .contact-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-content p {
+        font-size: 1rem;
+    }
+
+    .detail i {
+        font-size: 1.2rem;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .contact-section {
+        padding: 30px;
+        margin: 20px;
+    }
+
+    .contact-content h1 {
+        font-size: 2rem;
+    }
+
+    .detail i {
+        font-size: 1.1rem;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+}
+
+/* Extra small screens (very small phones) */
+@media (max-width: 480px) {
+    .hero {
+        height: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .contact-section {
+        padding: 20px;
+        margin: 10px;
+        gap: 20px;
+    }
+
+    .contact-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .detail i {
+        font-size: 1rem;
+    }
+
+    .map-container {
+        height: 300px;
+        padding: 10px;
+    }
+}
+
+/* Ultra small screens (below 360px) */
+@media (max-width: 360px) {
+    .hero {
+        height: 220px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .contact-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .detail i {
+        font-size: 0.9rem;
+    }
+
+    .map-container {
+        height: 250px;
+    }
 }
