@@ -182,7 +182,15 @@ main {
 }
 
 /* Footer Styles */
-/* Base Styles (Desktop First) */
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Footer Container */
 .footer {
     display: flex;
     background-color: black;
@@ -190,7 +198,7 @@ main {
     width: 100%;
     align-items: stretch;
     padding: 0;
-    min-height: 300px;
+    min-height: 300px; /* Minimum height for footer */
 }
 
 /* Left Section: Full Height Logo */
@@ -215,7 +223,7 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 35px 45px;
+    padding: 15px 30px;
     background-color: black;
     justify-content: space-between;
 }
@@ -228,6 +236,7 @@ main {
     text-align: left;
 }
 
+/* Individual Sections */
 .footer-section {
     flex: 1;
     min-width: 150px;
@@ -235,7 +244,21 @@ main {
     text-align: left;
 }
 
-/* Quick Links */
+/* Quick Links: 2-Column Layout on Small Screens */
+.footer-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 30px;
+    width: 100%;
+}
+
+.footer-links-container .footer-section {
+    flex: 1 1 45%; /* Makes 2 columns */
+    min-width: 140px;
+}
+
+/* Quick Links Styling */
 .footer-section h3 {
     font-size: 18px;
     margin-bottom: 12px;
@@ -265,7 +288,7 @@ main {
 .footer-social {
     display: flex;
     justify-content: flex-start;
-    gap: 25px;
+    gap: 15px;
     margin-top: 30px;
 }
 
@@ -282,17 +305,18 @@ main {
 /* Footer Bottom Section */
 .footer-bottom-wrapper {
     width: 100%;
-    border-top: 1px solid white;
+    border-top: 2px solid white; /* Extended white line */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
+    padding:28px 0;
     gap: 10px;
 }
 
+/* Footer Bottom Text */
 .footer-bottom {
     font-size: 14px;
-    margin: 0;
+    margin: 0px;
     white-space: nowrap;
 }
 
@@ -345,7 +369,7 @@ html, body, .footer {
     }
 }
 
-/* Tablets (768px - 1199px) */
+/* Tablets (991px and below) */
 @media (max-width: 991px) {
     .footer {
         flex-direction: column;
@@ -362,14 +386,16 @@ html, body, .footer {
         padding: 15px;
     }
 
-    .footer-sections {
-        flex-direction: column;
-        align-items: center;
+    /* Quick Links - 2 Column Layout */
+    .footer-links-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
     }
 
-    .footer-section {
-        text-align: center;
-        min-width: 100%;
+    .footer-links-container .footer-section {
+        flex: 1 1 45%;
+        min-width: 140px;
     }
 
     .footer-social {
@@ -377,19 +403,22 @@ html, body, .footer {
         margin-top: 15px;
     }
 
+    /* Copyright & Powered By Stacked */
     .footer-bottom-wrapper {
         flex-direction: column;
         gap: 5px;
         text-align: center;
         padding: 10px 0;
+        width: 90%; /* Extended White Line */
+        margin: 0 auto;
     }
 }
 
-/* Mobile Devices (Up to 767px) */
+/* Mobile Devices (767px and below) */
 @media (max-width: 767px) {
     .footer {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         min-height: auto;
     }
 
@@ -402,32 +431,41 @@ html, body, .footer {
         padding: 10px;
     }
 
-    .footer-sections {
-        flex-direction: column;
-        align-items: center;
+    /* Quick Links - Ensure 2 Column Layout */
+    .footer-links-container {
+        flex-direction: row;
+        justify-content: left;
+        gap: 20px;
     }
 
-    .footer-section {
-        text-align: center;
-        margin-bottom: 15px;
+    .footer-links-container .footer-section {
+        flex: 1 1 45%;
     }
 
     .footer-social {
-        justify-content: center;
+        justify-content: left;
     }
 
+    /* Copyright & Powered By Stacked */
     .footer-bottom-wrapper {
         flex-direction: column;
         gap: 5px;
-        text-align: center;
-        padding: 8px 0;
+        text-align: left;
+        padding: 10px 0;
+        width: 95%; /* Extended White Line */
+        margin: 0 auto;
     }
 }
 
-/* Small Mobile Devices (Up to 480px) */
+/* Small Mobile Devices (480px and below) */
 @media (max-width: 480px) {
     .footer-logo img {
         max-width: 100px;
+    }
+
+    /* Quick Links - Maintain 2 Column Format */
+    .footer-links-container {
+        flex-direction: column;
     }
 
     .footer-section h3 {
@@ -449,5 +487,10 @@ html, body, .footer {
     .enquiry-btn {
         font-size: 12px;
         padding: 6px 12px;
+    }
+
+    /* White Line Fully Extended */
+    .footer-bottom-wrapper {
+        width: 100%;
     }
 }
