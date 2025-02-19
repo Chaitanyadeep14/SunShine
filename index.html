@@ -7,32 +7,142 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/home.css">
     <script src="js/components.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- FontAwesome Icons -->
 </head>
 <body>
+
     <!-- Navbar -->
     <div id="navbar-container"></div>
 
-    <!-- Main Content -->
-    <main>
-        <section>
-            <h1>Welcome to SunShine Die Casting</h1>
-            <p>Precision engineering, trusted craftsmanship.</p>
-        </section>
-        <section>
-            <h2>Our Mission</h2>
-            <p>
-                To provide innovative die casting solutions with a focus on quality,
-                customer satisfaction, and sustainability.
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="company-name">SUNSHINE</h2>
+            <h2 class="tagline"><span>ENGINEERING WORKS</span></h2>
+            <h1>Engineering For <br>Sustainable <br>Future</h1>
+            <p class="hero-subtext">
+                Delivering cutting-edge engineering solutions with precision, innovation, and reliability 
+                to shape the future of technology and infrastructure.
             </p>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <div class="about-content">
+            <h2 class="section-title">About Us</h2>
+            <p>
+                <strong>Sunshine Engineering Works</strong>, established in 2009 in Bangalore, India, specializes in 
+                precision engineering and die-making for <strong>automotive, aerospace, electronics, and 
+                industrial manufacturing</strong>. With a state-of-the-art facility and advanced 
+                <strong>CNC & VMC machines</strong>, we deliver high-quality machining solutions tailored to industry needs.
+            </p>
+
+            <div class="stats-container">
+                <!-- First Column: Orders Completed -->
+                <div class="stat-box large">
+                    <p class="stat-title">Orders Completed</p>
+                    <p class="stat-value" data-target="10000">0</p>
+                </div>
 
 
-    
-    
-    
+                <!-- Second Column: Customers Served & Customer Retention -->
+<div class="stat-column">
+    <div class="stat-box customers-served">
+        <i class="fa-regular fa-user"></i>
+        <p class="stat-title">Customers Served</p>
+        <p class="stat-value" data-target="88">0+</p>
+    </div>
+    <div class="stat-box customer-retention">
+        <p class="stat-title">Customer Retention</p>
+        <div class="progress-container">
+            <svg class="progress-ring" width="100" height="100">
+                <circle class="progress-ring-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="progress-ring-circle" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <p class="stat-value" id="retention-value">0%</p>
+        </div>
+    </div>
+</div>
+
+
+                <!-- Third Column: Stat Image -->
+                <div class="stat-image">
+                    <img src="assets/factory-automation.jpg" alt="Factory Automation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+<section class="services">
+    <div class="services-container">
+        <!-- Left Side: Image -->
+        <div class="services-image">
+            <img src="assets/services-image.jpg" alt="CNC Machining">
+        </div>
+
+        <!-- Right Side: Text Content -->
+        <div class="services-content">
+            <h2><span style="color: #B40000;">What</span> <span style="color: black;">Services</span> <br>
+                <span style="color: #B40000;">We’re Offering</span></h2>
+                
+            <ul>
+                <li><strong>CNC & VMC Machining</strong> – High-precision cutting and shaping</li>
+                <li><strong>Die Casting & Tooling</strong> – Custom dies for mass production</li>
+                <li><strong>Lathe Operations</strong> – Metal shaping and turning</li>
+                <li><strong>Drilling & Tapping</strong> – Accurate hole creation for industrial parts</li>
+                <li><strong>Hydraulic Pressing & Welding</strong> – Custom fabrication solutions</li>
+            </ul>
+            <a href="#" class="cta-button">Explore our services</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Clients Section -->
+<section class="clients">
+    <h2 style="color: black;">Meet Our <span>Clients</span></h2>
+    <div class="clients-grid">
+        <div class="client"><img src="assets/legion-energy.png" alt="Legion Energy"></div>
+        <div class="client"><img src="assets/rock-tools.png" alt="Rock Tools"></div>
+        <div class="client"><img src="assets/enginium.png" alt="Enginium"></div>
+        <div class="client"><img src="assets/mix-separation.png" alt="Mix Separation"></div>
+        <div class="client"><img src="assets/rock-tools-large.png" alt="Rock Tools Large"></div>
+        <div class="client"><img src="assets/orange-power.png" alt="Orange Power"></div>
+        <div class="client"><img src="assets/katesh.png" alt="Katesh"></div>
+        <div class="client"><img src="assets/mix-separation2.png" alt="Mix Separation"></div>
+        <div class="client"><img src="assets/imt.png" alt="IMT"></div>
+    </div>
+</section>
+
     <!-- Footer -->
     <div id="footer-container"></div>
-</body>
 
+    <!-- Counter Animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(".stat-value");
+            const speed = 50;
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute("data-target");
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        });
+    </script>
+
+</body>
 </html>

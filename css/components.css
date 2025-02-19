@@ -64,6 +64,23 @@ nav ul li a:hover::after {
 nav ul li a:hover {
     color: #EC2027; /* Optional: Change text color on hover */
 }
+/* Highlight the current page link */
+nav ul li a.active {
+    color: #EC2027 !important; /* Ensures highlight */
+    font-weight: bold;
+    position: relative;
+}
+
+/* Keep the underline visible on the active page */
+nav ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #EC2027;
+}
 
 /* Footer Styles */
 footer {

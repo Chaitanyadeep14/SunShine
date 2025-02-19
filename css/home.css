@@ -1,63 +1,540 @@
-/* General Styles for the Home Page */
-
-main {
-    padding: 20px;
-    font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat globally */
-    background-color: #f9f9f9;
-    color: #333;
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+    width: 100%;
 }
 
-main h1 {
-    text-align: center;
-    margin-bottom: 20px;
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url("https://i.pinimg.com/736x/0d/ad/c1/0dadc134b16aaf6f5830319d58ec8527.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Black Transparent Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Company Name */
+.company-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* Tagline */
+.tagline {
+    margin-top: 0;
+}
+
+.tagline span {
+    font-size: 30px;
+    font-weight: 700;
     color: #EC2027;
-    font-size: 2em;
-    font-weight: 700; /* Bold heading */
 }
 
-main p {
-    text-align: center;
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    font-weight: 400; /* Regular weight for body text */
+/* Main Heading */
+.hero h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 10px 0;
+    line-height: 1.4;
 }
 
-section {
-    margin: 20px 0;
-    text-align: center;
+/* About Section */
+.about {
+    background-color: #FFD6D6;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-section h2 {
-    margin-top: 30px;
+/* About Content */
+.about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Section Title */
+.section-title {
+    color: #B40000;
+    font-size: 2.5em;
+    font-weight: 700;
     margin-bottom: 15px;
-    font-size: 1.8em;
-    color: #333;
-    font-weight: 600; /* Medium weight for subheadings */
 }
 
-section p {
+/* About Paragraph */
+.about p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.8;
+    font-weight: 400;
+    max-width: 1100px;
+    margin-bottom: 30px;
+}
+
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures equal height */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+
+/* First Column - Orders Completed */
+.stat-box.large {
+    position: relative;
+    background: url("https://i.pinimg.com/736x/d8/57/c3/d857c364cff36274c3f8700129d7cd12.jpg") no-repeat center center/cover;
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: left;
+    width: 22%;
+    min-height: 290px; /* Increased height to match the second column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Red See-Through Overlay */
+.stat-box.large::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(236, 32, 39, 0.6); /* Red transparent layer */
+    border-radius: 10px;
+}
+
+/* Ensure Text Appears Above the Overlay */
+.stat-box.large p {
+    position: relative;
+    z-index: 2;
+    margin-left: 10px;
+}
+
+/* Orders Completed Value - Add "+" */
+.stat-box.large .stat-value::after {
+    content: "+";
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-left: 5px;
+}
+/* Second Column - Customers Served & Retention */
+.stat-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+}
+
+/* General Stat Box */
+.stat-box {
+    background-color: #8B0000;
+    color: white !important;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Customers Served Container - Override Defaults */
+.stat-box.customers-served {
+    position: relative;
+    text-align: left !important; /* Align text to the left */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start !important; /* Align content to the left */
+}
+
+/* Add "+" Sign After Value */
+.stat-box.customers-served .stat-value::after {
+    content: "+"; /* Add plus sign */
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Ensure Icon Size Increases */
+.stat-box.customers-served i {
+    position: absolute;
+    bottom: 30px; /* Bottom gap */
+    right: 50px;  /* Right gap */
+    font-size: 60px !important; /* Force increased icon size */
+    width: 60px !important;
+    height: auto !important;
+    color: white;
+}
+
+/* Customer Retention Container */
+.stat-box.customer-retention {
+    position: relative;
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Title at the Top */
+.stat-box.customer-retention .stat-title {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* Center Progress Circle */
+.progress-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG Progress Ring */
+.progress-ring {
+    position: absolute;
+    transform: rotate(-90deg);
+}
+
+/* Background Circle */
+.progress-ring-bg {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+}
+
+/* Progress Circle */
+.progress-ring-circle {
+    fill: none;
+    stroke: white;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 282.6; /* 2 * π * r (for full circle) */
+    stroke-dashoffset: 282.6; /* Start fully hidden */
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
+/* Center Value */
+#retention-value {
+    position: absolute;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: white;
+}
+
+
+/* Reduce Title Font Weight */
+.stat-title {
+    font-size: 1.5em !important;
+    font-weight: 600 !important; /* Reduced from 800 */
+    margin-bottom: -5px !important; /* Further reduced gap */
+    color: white !important;
+}
+
+/* Reduce Gap Between Title & Value */
+.stat-value {
+    font-size: 3em !important;
+    font-weight: 800 !important; /* Slightly reduced weight */
+    color: white !important;
+    margin-top: -15px !important; /* Further reduced spacing */
+}
+
+
+/* Profile Icon in "Customers Served" */
+.stat-box i {
+    font-size: 38px !important; /* Increased icon size */
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Third Column - Stat Image */
+.stat-image {
+    width: 40%;
+    min-height: 250px; /* Increased height to match the second column */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .about {
+        padding: 40px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .stat-box.large, .stat-column, .stat-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 30px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+/* Services Section */
+.services {
+    background-color: white;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    max-width: 1100px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+/* Left Side: Image */
+.services-image {
+    flex: 1;
+    max-width: 400px;
+    border: 5px solid #B40000;
+    border-radius: 5px;
+}
+
+.services-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Right Side: Content */
+.services-content {
+    flex: 4; /* Increased width */
+    max-width: 600px; /* Adjusted for better readability */
+    text-align: left;
+}
+
+/* Services Section Heading */
+.services-content h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #B40000; /* Default red color */
+}
+
+/* Only "Services" in Black */
+.services-content h2 span,
+.services-content h2 br + span {
+    color: black;
+    font-weight: 800;
+}
+
+
+/* Service List */
+.services-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    color: #000;
+}
+
+.services-content ul li {
     font-size: 1.1em;
     line-height: 1.6;
-    margin: 0 auto;
-    max-width: 800px;
-    color: #555;
+    margin-bottom: 10px;
 }
 
-/* Call-to-Action Button Styles */
+/* CTA Button */
 .cta-button {
     display: inline-block;
     padding: 12px 24px;
-    margin-top: 20px;
-    background-color: #EC2027;
-    color: #fff;
+    background-color: #B40000;
+    margin-top: 30px;
+    color: white;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button:hover {
-    background-color: #d41d24;
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: #8B0000;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .services-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .services-content h2 {
+        font-size: 2.2em;
+    }
+
+    .services-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 40px;
+    }
+
+    .services-content h2 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+}
+
+
+/* Clients Section */
+.clients {
+    background-color: #FFD6D6;
+    padding: 60px;
+    text-align: center;
+}
+
+/* Section Title */
+.clients h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.clients h2 span {
+    color: #B40000;
+    font-weight: 800;
+}
+
+/* Clients Grid */
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; /* Ensure no gap between grid items */
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Individual Client Boxes with Inner Borders */
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 2px solid #B40000; /* Inner borders */
+}
+
+/* Remove Outer Border */
+.clients-grid {
+    border: none; /* Ensure no outer border */
+}
+
+/* Client Logos */
+.client img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .clients {
+        padding: 40px;
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

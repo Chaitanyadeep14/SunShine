@@ -55,3 +55,26 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComponent("#navbar-container", "components/navbar.html");
     loadComponent("#footer-container", "components/footer.html");
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Wait for the navbar to load dynamically
+    const checkNavbarLoaded = setInterval(() => {
+        const navLinks = document.querySelectorAll("#navbar-container nav ul li a");
+
+        if (navLinks.length > 0) { // Ensure navbar is loaded
+            clearInterval(checkNavbarLoaded);
+
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute("href").split("/").pop();
+
+                if (linkHref === currentPage || (currentPage === "" && linkHref === "index.html")) {
+                    link.classList.add("active");
+                    console.log("Active link applied:", linkHref); // Debugging
+                }
+            });
+        }
+    }, 100); // Check every 100ms until navbar is loaded
+});
