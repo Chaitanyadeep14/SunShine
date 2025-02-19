@@ -65,7 +65,6 @@ nav ul li a:hover {
     color: #EC2027; /* Optional: Change text color on hover */
 }
 
-
 /* Footer Styles */
 footer {
     background-color: #333; /* Dark background for footer */
@@ -294,7 +293,7 @@ body, html {
 
 .footer-social a {
     color: white;
-    font-size: 26px;
+    font-size: 25px;
     text-decoration: none;
 }
 
