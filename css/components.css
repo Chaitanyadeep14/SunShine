@@ -88,7 +88,7 @@ footer {
     color: white; /* Light text for visibility */
     text-align: center;
     padding: 1rem 0;
-    position: re; /* Fix position at the bottom */
+    position: relative; /* Fix position at the bottom */
     width: 100%;
     bottom: 0;
     z-index: 10; /* Keeps footer on top of content */
@@ -104,7 +104,7 @@ footer {
     width: 20px;
     height: 15px;
     position: absolute; /* Fix the position */
-    right: 20px; /* Ensure the hamburger stays inside the viewport */
+    right: 0px; /* Ensure the hamburger stays inside the viewport */
     top: 50%; /* Align vertically with the navbar */
     transform: translateY(-50%); /* Adjust for vertical centering */
     z-index: 11; /* Ensure it's on top of other elements */
