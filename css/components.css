@@ -104,7 +104,7 @@ footer {
     width: 20px;
     height: 15px;
     position: absolute; /* Fix the position */
-    right: 0px; /* Ensure the hamburger stays inside the viewport */
+    right: 20px; /* Ensure the hamburger stays inside the viewport */
     top: 50%; /* Align vertically with the navbar */
     transform: translateY(-50%); /* Adjust for vertical centering */
     z-index: 11; /* Ensure it's on top of other elements */
@@ -473,6 +473,17 @@ html, body, .footer {
     }
 }
 
+@media (max-width: 700px){
+    .footer-sections{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .footer-bottom-wrapper{
+        width: 600px;
+    }
+}
+
 /* Small Mobile Devices (480px and below) */
 @media (max-width: 480px) {
     .footer-logo img {
@@ -482,6 +493,10 @@ html, body, .footer {
     /* Quick Links - Maintain 2 Column Format */
     .footer-links-container {
         flex-direction: column;
+    }
+
+    .footer-sections{
+        width: 100%;
     }
 
     .footer-section h3 {
