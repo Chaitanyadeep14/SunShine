@@ -164,7 +164,7 @@ footer {
 
     .hamburger {
         display: flex;
-        margin-right: 30px;
+        margin-right: 50px;
     }
 
     /* Hamburger to Cross Transition */
@@ -334,6 +334,11 @@ body, html {
     font-size: 14px;
     margin: 0px;
     white-space: nowrap;
+}
+.footer-bottom a {
+    color: #BD0000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* Enquiry Button */
