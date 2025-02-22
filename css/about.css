@@ -6,7 +6,7 @@ body {
     color: #333;
 }
 
-main{
+main {
     margin: 20px 20px;
     padding: 0 !important;
 }
@@ -30,7 +30,7 @@ a {
     padding: 50px 10%;
 }
 
-.commitment h2 em{
+.commitment h2 em {
     margin-bottom: 20px;
     text-align: left;
     font-weight: 600;
@@ -38,7 +38,7 @@ a {
     color: #A3030E;
 }
 
-.commitment p{
+.commitment p {
     font-size: 1.25rem;
     text-align: justify;
     margin-bottom: 20px;
@@ -58,37 +58,37 @@ a {
     justify-content: space-between;
 }
 
-.about-text h3{
+.about-text h3 {
     font-family: 'Cabin', sans-serif;
     color: black;
     letter-spacing: 5px;
 }
 
-.about-text h2{
-    color:#A3030E;
+.about-text h2 {
+    color: #A3030E;
     font-family: 'Inter', sans-serif;
     font-style: italic;
 }
 
-.founder-text h3{
+.founder-text h3 {
     font-family: 'Cabin', sans-serif;
     color: black;
     letter-spacing: 5px;
 }
 
-.founder-text h2{
-    color:#A3030E;
+.founder-text h2 {
+    color: #A3030E;
     font-family: 'Inter', sans-serif;
     font-style: italic;
 }
 
-.vision-content h3{
+.vision-content h3 {
     font-family: 'Cabin', sans-serif;
     color: black;
 }
 
-.vision-content h2{
-    color:#A3030E;
+.vision-content h2 {
+    color: #A3030E;
     font-family: 'Inter', sans-serif;
     font-style: italic;
 }
@@ -99,7 +99,7 @@ a {
     max-width: 100%;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .about-image img,
@@ -117,6 +117,15 @@ a {
 
 .founder-image {
     position: relative;
+    max-height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.founder-image img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
 }
 
 .founder-label {
@@ -143,7 +152,7 @@ a {
     width: 45%;
 }
 
-.vision-text h3{
+.vision-text h3 {
     font-family: 'Cabin', sans-serif;
     color: black;
     letter-spacing: 5px;
@@ -160,12 +169,12 @@ a {
     max-width: 50%;
 }
 
-.innovation-content h2{
+.innovation-content h2 {
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-.innovation-content p{
+.innovation-content p {
     line-height: 30px;
     color: black;
     font-family: 'Inter', sans-serif;
@@ -191,8 +200,7 @@ a {
     max-width: 40%;
 }
 
-
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .about-content,
     .founder-content,
     .vision-content {
@@ -200,19 +208,19 @@ a {
         flex-direction: column;
     }
 
-    .founder-content{
+    .founder-content {
         flex-direction: column-reverse;
     }
 }
 
-@media (max-width: 670px){
+@media (max-width: 670px) {
     .innovation {
         flex-direction: column-reverse;
         width: auto;
         padding: 10px;
     }
 
-    .innovation-content{
+    .innovation-content {
         max-width: 80%;
     }
 }

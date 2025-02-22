@@ -5,17 +5,13 @@ body {
     background-color: white;
 }
 
-.main{
-    background-color: white !important;
-}
-
 /* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     margin-top: 20px;
-    background-color: white;
+    background-color: #f9f9f9;
 }
 
 /* Filter Navbar */
@@ -55,7 +51,7 @@ body {
 /* Hero Section */
 .hero-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 40px;
     text-align: left;
@@ -73,7 +69,7 @@ body {
 }
 
 .highlight {
-    color: red;
+    color: #A3030E;
 }
 
 .hero-text h2 {
@@ -89,12 +85,11 @@ body {
 }
 
 .hero-text ul li span{
-    color: red;
+    color: #A3030E;
     font-weight: bold;
 }
 .hero-image img {
-    width: 300px;
-    height: auto;
+    max-width: 300px;
     border-radius: 10px;
 }
 
@@ -109,7 +104,7 @@ body {
 }
 
 .products h2 span{
-    color: red;
+    color: #A3030E;
 }
 
 .product-grid {
@@ -136,22 +131,40 @@ body {
 /* Quality Section */
 .quality-section {
     padding: 40px;
-    background: #ffefef;
 }
 
 .quality-section h2 {
-    color: red;
-    font-size: 24px;
+    color: #A3030E;
+    font-size: 2rem;
+    text-align: center;
 }
 
+.quality-section h3{
+    color: #A3030E;
+    font-size: 1.5rem;
+}
 .quality-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #FFD0D4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.quality-description{
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: start;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
 .quality-text {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .quality-text h3 {
@@ -160,11 +173,13 @@ body {
 }
 
 .quality-text p {
-    color: gray;
+    font-size: 1.25rem;
+    color: black;
 }
 
 .quality-image img {
+    display: block;
+    margin: 0 auto;
     width: 250px;
     height: auto;
-    border-radius: 10px;
 }
