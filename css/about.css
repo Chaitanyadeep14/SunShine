@@ -1,42 +1,218 @@
-/* General Styles for the About Us Page */
-main {
-    padding: 20px;
-    background-color: #f4f4f4;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
     color: #333;
 }
 
-main h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #EC2027;
-    font-weight: 600;
+main{
+    margin: 20px 20px;
+    padding: 0 !important;
 }
 
-main p {
-    text-align: center;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    font-weight: 400;
+a {
+    color: #BD0000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-main h2 {
-    margin-top: 20px;
-    font-size: 1.5em;
-    color: #000;
-    font-weight: 600;
+.highlight {
+    color: #BD0000;
+    font-weight: bold;
+}
+
+/* Commitment Section */
+.commitment {
+    text-align: start;
+    padding: 50px 20px;
+    max-width: 800px;
+    padding: 50px 10%;
+}
+
+.commitment h2 em{
+    margin-bottom: 20px;
     text-align: left;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: #A3030E;
 }
 
-main ul {
-    list-style: square;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 600px;
+.commitment p{
+    font-size: 1.25rem;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: black;
 }
 
-main ul li {
-    margin: 10px 0;
-    font-size: 1.1em;
-    padding-left: 15px;
-    font-weight: 400;
+/* About Section */
+.about,
+.founder,
+.vision,
+.innovation {
+    padding: 50px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text h3{
+    font-family: 'Cabin', sans-serif;
+    color: black;
+    letter-spacing: 5px;
+}
+
+.about-text h2{
+    color:#A3030E;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+}
+
+.founder-text h3{
+    font-family: 'Cabin', sans-serif;
+    color: black;
+    letter-spacing: 5px;
+}
+
+.founder-text h2{
+    color:#A3030E;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+}
+
+.vision-content h3{
+    font-family: 'Cabin', sans-serif;
+    color: black;
+}
+
+.vision-content h2{
+    color:#A3030E;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+}
+
+.about-content,
+.founder-content,
+.vision-content {
+    max-width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.about-image img,
+.founder-image img,
+.vision-images img,
+.innovation-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Founder Section */
+.founder {
+    background-color: #f9f9f9;
+}
+
+.founder-image {
+    position: relative;
+}
+
+.founder-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #BD0000;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+/* Vision Section */
+.vision {
+    background-color: #fff;
+}
+
+.vision-images {
+    display: flex;
+    gap: 15px;
+}
+
+.vision-images img {
+    width: 45%;
+}
+
+.vision-text h3{
+    font-family: 'Cabin', sans-serif;
+    color: black;
+    letter-spacing: 5px;
+}
+
+/* Innovation Section */
+.innovation {
+    background-color: #fde4e4;
+    display: flex;
+    padding: 50px 10%;
+}
+
+.innovation-content {
+    max-width: 50%;
+}
+
+.innovation-content h2{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.innovation-content p{
+    line-height: 30px;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+}
+
+.contact-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-btn:hover {
+    background-color: #a00000;
+}
+
+.innovation-image {
+    max-width: 40%;
+}
+
+
+@media (max-width: 768px){
+    .about-content,
+    .founder-content,
+    .vision-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .founder-content{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 670px){
+    .innovation {
+        flex-direction: column-reverse;
+        width: auto;
+        padding: 10px;
+    }
+
+    .innovation-content{
+        max-width: 80%;
+    }
 }

@@ -119,7 +119,7 @@ body, html {
     position: relative;
     background: url("https://i.pinimg.com/736x/d8/57/c3/d857c364cff36274c3f8700129d7cd12.jpg") no-repeat center center/cover;
     color: white;
-    padding: 50px;
+    padding: 20px;
     border-radius: 10px;
     text-align: left;
     width: 22%;
@@ -129,7 +129,7 @@ body, html {
     justify-content: center;
     align-items: flex-start;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    height: auto;
 }
 
 /* Red See-Through Overlay */
@@ -199,6 +199,19 @@ body, html {
     margin-left: 5px;
 }
 
+.stat-box.customers-served .stat-image {
+    width: 100px;
+    min-height: 100px;
+    border-radius: 10px;
+    position: absolute; /* Change to absolute positioning */
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Ensure Icon Size Increases */
 .stat-box.customers-served i {
     position: absolute;
@@ -213,12 +226,14 @@ body, html {
 /* Customer Retention Container */
 .stat-box.customer-retention {
     position: relative;
-    text-align: center;
-    padding: 25px;
+    text-align: left !important; /* Align text to the left */
+    padding: 0px 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start !important; /* Align content to the left */
+    height: 100%;
+    background-color: #480000;
 }
 
 /* Title at the Top */
@@ -231,11 +246,13 @@ body, html {
 /* Center Progress Circle */
 .progress-container {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
 /* SVG Progress Ring */
@@ -248,26 +265,52 @@ body, html {
 .progress-ring-bg {
     fill: none;
     stroke: #ddd;
-    stroke-width: 10;
+    stroke-width: 5px;
 }
 
 /* Progress Circle */
 .progress-ring-circle {
     fill: none;
-    stroke: white;
-    stroke-width: 10;
+    stroke: url(#progressGradient); /* Apply gradient */
+    stroke-width: 5px;
     stroke-linecap: round;
-    stroke-dasharray: 282.6; /* 2 * π * r (for full circle) */
-    stroke-dashoffset: 282.6; /* Start fully hidden */
-    transition: stroke-dashoffset 2s ease-in-out;
+    stroke-dasharray: 314.16; /* Full circle */
+    stroke-dashoffset: 314.16; /* Start empty */
+    animation: progressAnimation 2s ease-in-out forwards;
+}
+
+/* Percentage Text */
+.progress-container span {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    top: 40%;
+    right: 20px;
+}
+
+/* Animation for stroke-dashoffset */
+@keyframes progressAnimation {
+    from {
+        stroke-dashoffset: 314.16;
+    }
+    to {
+        stroke-dashoffset: 28.27; /* (314.16 - 286) */
+    }
 }
 
 /* Center Value */
 #retention-value {
     position: absolute;
-    font-size: 1.8em;
+    font-size: 2em; /* Increased font size */
     font-weight: 900;
     color: white;
+    margin: 0;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    margin: auto auto !important;
 }
 
 
@@ -277,6 +320,7 @@ body, html {
     font-weight: 600 !important; /* Reduced from 800 */
     margin-bottom: -5px !important; /* Further reduced gap */
     color: white !important;
+    margin-top: 10px !important;
 }
 
 /* Reduce Gap Between Title & Value */
@@ -313,6 +357,12 @@ body, html {
     border-radius: 10px;
 }
 
+@media(max-width: 1204px){
+    .stat-title{
+        font-size: 1.2em !important;
+    }
+}
+
 
 
 
@@ -328,9 +378,33 @@ body, html {
         align-items: center;
     }
 
-    .stat-box.large, .stat-column, .stat-image {
+    .stat-column{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .stat-box.customers-served{
+        min-width: 200px;
+    }
+
+    .stat-value{
+        margin-right: 10px;
+    }
+
+    .stat-box.customer-retention{
+        min-height: 185px !important;
+    }
+
+    .stat-box.large, .stat-image {
         width: 100%;
         height: auto;
+    }
+
+    .stat-image{
+        max-height: 300px;
     }
 }
 
@@ -342,6 +416,14 @@ body, html {
     .stats-container {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+@media (max-width: 585px){
+    .stat-column{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
     }
 }
 
@@ -389,7 +471,7 @@ body, html {
 
 /* Services Section Heading */
 .services-content h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: 700;
     line-height: 1.2;
     color: #B40000; /* Default red color */
@@ -438,7 +520,7 @@ body, html {
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .services-container {
         flex-direction: column;
         text-align: center;
@@ -452,15 +534,38 @@ body, html {
     .services-content {
         text-align: center;
     }
-}
+} */
 
 @media (max-width: 768px) {
+
+    .services-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .services-content h2 {
+        font-size: 2.2em;
+    }
+
+    .services-content {
+        text-align: center;
+    }
+
     .services {
         padding: 40px;
     }
 
     .services-content h2 {
         font-size: 2em;
+    }
+
+    .services-content h2 br{
+        display: none;
+    }
+
+    .services-content ul li{
+        text-align: start;
     }
 
     .cta-button {
@@ -535,9 +640,19 @@ body, html {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Override the general rule for nth-child(3n) */
+    .client:nth-child(3n) {
+        border-right: 2px solid #B40000; /* Reapply right border */
+    }
+
+    .client:nth-last-child(-n+3) {
+        border-bottom: 2px solid #B40000;
+    }
+
     /* Remove Right Border for 2nd Column on Smaller Screens */
     .client:nth-child(2n) {
         border-right: none;
+        border-bottom: 2px solid #B40000 !important;
     }
 
     /* Remove Bottom Border for Last Row on Smaller Screens */
@@ -547,18 +662,13 @@ body, html {
 }
 
 @media (max-width: 768px) {
+
+    .clients h2{
+        font-size: 2em;
+    }
+
     .clients {
         padding: 40px;
-    }
-
-    .clients-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    /* Remove all borders for single-column layout */
-    .client {
-        border-right: none;
-        border-bottom: none;
     }
 }
 
@@ -603,8 +713,7 @@ body, html {
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    min-width: 28%; /* Ensure 3 cards fit perfectly */
-    max-width: 25%;
+    min-width: 220px; /* Ensure 3 cards fit perfectly */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -650,6 +759,7 @@ body, html {
     font-size: 1.2em;
     font-weight: 700;
     margin-bottom: 10px;
+    color: black;
 }
 
 /* Review Text */
@@ -658,6 +768,7 @@ body, html {
     color: #333;
     line-height: 1.5;
     margin-bottom: 15px;
+    text-align: start;
 }
 
 /* Rating Stars */
@@ -699,9 +810,12 @@ body, html {
         width: 90%;
     }
 
-    .prev-btn, .next-btn {
-        font-size: 24px;
-        padding: 8px 12px;
+    .prev-btn{
+        left: -40px;
+    }
+
+    .next-btn{
+        right: -40px;
     }
 }
 
@@ -710,18 +824,8 @@ body, html {
         padding: 40px;
     }
 
-    .testimonial-container {
-        width: 100%;
-        padding: 5px;
-    }
-
-    .testimonial-card {
-        min-width: 90%;
-        max-width: 90%;
-    }
-
-    .prev-btn, .next-btn {
-        display: none;
+    .testimonials h2{
+        font-size: 2em;
     }
 }
 
