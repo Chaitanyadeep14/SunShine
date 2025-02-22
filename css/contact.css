@@ -1,12 +1,6 @@
 /* ============================
    🌟 General Styling
 =============================== */
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Body and Main Layout */
 body, html {
