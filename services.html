@@ -7,24 +7,63 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/services.css">
     <script src="js/components.js" defer></script>
+    <script src="js/services.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
     <div id="navbar-container"></div>
 
     <!-- Main Content -->
-    <main>
-        <section>
-            <h1>Our Services</h1>
-            <p>We specialize in precision die casting, ensuring exceptional quality for every project.</p>
-            <ul>
-                <li>Custom Die Casting</li>
-                <li>Prototype Development</li>
-                <li>High-Volume Production</li>
-                <li>Finishing and Polishing</li>
-            </ul>
-        </section>
-    </main>
+    <div class="container">
+        <main>
+            <div class="filter-navbar">
+                <a href="#" class="filter-link" data-category="cnc-vnc">CNC & VNC</a>
+                <a href="#" class="filter-link" data-category="die-casting">Die Casting</a>
+                <a href="#" class="filter-link" data-category="lathe">Lathe</a>
+                <a href="#" class="filter-link" data-category="drill-tap">Drill & Tap</a>
+                <a href="#" class="filter-link" data-category="hydraulic-press">Hydraulic Press</a>
+            </div>
+        
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-image">
+                    <img src="placeholder.svg" alt="CNC Machine">
+                </div>
+                <div class="hero-text">
+                    <h1>Precision in <span class="highlight">Every Cut,</span></h1>
+                    <h2>Excellence in Every Part</h2>
+                    <p>CNC (Computer Numerical Control) and VMC (Vertical Machining Center) machining are advanced manufacturing techniques used for high-precision cutting, drilling, and shaping of materials.</p>
+                    <ul>
+                        <li><span>High Precision</span> - Ensures accuracy with tight tolerances.</li>
+                        <li><span>Automation</span> - Reduces human error and improves efficiency.</li>
+                        <li><span>Versatility</span> - Suitable for automotive and industrial applications.</li>
+                        <li><span>Cost-Effective</span> - Optimizes material usage and reduces waste.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Products Section -->
+            <section class="products">
+                <h2>Browse Our <span>Products</span></h2>
+                <div id="product-list" class="product-grid"></div>
+            </section>
+        
+            <!-- Quality Section -->
+            <section class="quality-section">
+                <h2>Quality</h2>
+                <div class="quality-content">
+                    <div class="quality-text">
+                        <h3>SUCCESS IS WHERE PREPARATION AND OPPORTUNITY MEET</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
+                    </div>
+                    <div class="quality-image">
+                        <img src="placeholder.svg" alt="Quality Control Diagram">
+                    </div>
+                </div>
+            </section>
+        
+        </main>
+    </div>
 
     <!-- Footer -->
     <div id="footer-container"></div>
