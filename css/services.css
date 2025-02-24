@@ -48,6 +48,47 @@ body {
     color: white;
 }
 
+/* ============================
+   🌟 Hero Section
+=============================== */
+.hero {
+    margin-top: 0;
+    padding: 0;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2Fservices_hero.jpg?alt=media&token=039f5693-ae7a-4777-8d67-f40f2dd55fcf") no-repeat center center/cover;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 0; /* Default for larger screens */
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
 /* Hero Section */
 .hero-section {
     display: flex;

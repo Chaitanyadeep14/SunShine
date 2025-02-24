@@ -22,6 +22,49 @@ a {
     font-weight: bold;
 }
 
+
+
+/* ============================
+   🌟 Hero Section
+=============================== */
+.hero {
+    margin-top: 0;
+    padding: 0;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FAbout%2Fabout_hero.jpg?alt=media&token=51c43dfc-f81f-46f2-a658-25eee280768b") no-repeat center center/cover;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 0; /* Default for larger screens */
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
 /* Commitment Section */
 .commitment {
     text-align: start;

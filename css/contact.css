@@ -25,7 +25,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("../assets/contact-hero.png") no-repeat center center/cover;
+    background: url("https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FContact%2FContact_hero.jpg?alt=media&token=264a16dc-8a5c-49cb-8ee0-17c121485e82") no-repeat center center/cover;
     position: relative;
     box-sizing: border-box;
 }
