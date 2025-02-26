@@ -91,6 +91,10 @@ a {
 }
 
 /* About Section */
+.more-content {
+    display: none;
+}
+
 .about,
 .founder,
 .vision,
@@ -220,7 +224,7 @@ a {
 }
 
 .innovation-content p {
-    line-height: 30px;
+    line-height: 50px;
     color: black;
     font-family: 'Inter', sans-serif;
     font-size: 1.25rem;

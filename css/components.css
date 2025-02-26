@@ -53,7 +53,7 @@ nav ul li a::after {
     left: 0;
     width: 0%; /* Start with no underline */
     height: 2px; /* Thickness of the underline */
-    background-color: #EC2027; /* Underline color */
+    background-color: #A3030E; /* Underline color */
     transition: width 0.4s ease-in-out; /* Smooth animation for the underline */
 }
 
@@ -62,11 +62,11 @@ nav ul li a:hover::after {
 }
 
 nav ul li a:hover {
-    color: #EC2027; /* Optional: Change text color on hover */
+    color: #A3030E; /* Optional: Change text color on hover */
 }
 /* Highlight the current page link */
 nav ul li a.active {
-    color: #EC2027 !important; /* Ensures highlight */
+    color: #A3030E !important; /* Ensures highlight */
     font-weight: bold;
     position: relative;
 }
@@ -79,7 +79,7 @@ nav ul li a.active::after {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #EC2027;
+    background-color: #A3030E;
 }
 
 /* Footer Styles */
@@ -159,7 +159,7 @@ footer {
         
     }
     nav.active ul li a {
-        color: #EC2027; /* Red links in the dropdown */
+        color: #A3030E; /* Red links in the dropdown */
     }
 
     .hamburger {

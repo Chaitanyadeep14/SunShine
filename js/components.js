@@ -78,3 +78,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, 100); // Check every 100ms until navbar is loaded
 });
+
+
+
+
+//read more link 
+function toggleReadMore(contentId, linkElement) {
+    var content = document.getElementById(contentId);
+    
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "inline";
+        linkElement.textContent = "Read Less";
+    } else {
+        content.style.display = "none";
+        linkElement.textContent = "Read More";
+    }
+}

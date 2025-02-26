@@ -117,7 +117,7 @@ body, html {
 /* First Column - Orders Completed */
 .stat-box.large {
     position: relative;
-    background: url("https://i.pinimg.com/736x/d8/57/c3/d857c364cff36274c3f8700129d7cd12.jpg") no-repeat center center/cover;
+    background: url("../assets/orders_comp_bg.jpg") no-repeat center center/cover;
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -140,7 +140,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(236, 32, 39, 0.6); /* Red transparent layer */
+    background: rgba(236, 32, 39, 0.0); /* Red transparent layer */
     border-radius: 10px;
 }
 
@@ -448,7 +448,6 @@ body, html {
 .services-image {
     flex: 1;
     max-width: 400px;
-    border: 5px solid #B40000;
     border-radius: 5px;
 }
 
