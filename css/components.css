@@ -33,7 +33,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 35px;
+    margin: 0 45px;
 }
 
 /* General Navbar Link Styles */
@@ -151,12 +151,12 @@ nav {
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 35px;
 }
 
 nav ul li a {
@@ -244,7 +244,9 @@ nav ul li a.active::after {
         text-decoration: none;
         transition: color 0.3s ease-in-out;
     }
-
+    nav ul li a::after {
+        display: none !important; /* Completely remove underline effect */
+    }
     /* Icon Styling */
     nav ul li a i {
         font-size: 20px;
