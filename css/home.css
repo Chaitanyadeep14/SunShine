@@ -70,6 +70,117 @@ body, html {
     line-height: 1.4;
 }
 
+/* Large Screens (Desktops & Laptops) */
+@media (max-width: 1440px) {
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero h2.company-name {
+        font-size: 42px;
+    }
+
+    .hero h2.tagline {
+        font-size: 32px;
+    }
+
+    .hero-subtext {
+        font-size: 16px;
+    }
+}
+
+/* Tablets (Portrait & Landscape) */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2.company-name {
+        font-size: 38px;
+    }
+
+    .hero h2.tagline {
+        font-size: 28px;
+    }
+
+    .hero-subtext {
+        font-size: 16px;
+        max-width: 600px;
+    }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 768px) {
+    .hero {
+        height: 90vh;
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.3;
+    }
+
+    .hero h2.company-name {
+        font-size: 32px;
+    }
+
+    .hero h2.tagline {
+        font-size: 24px;
+    }
+
+    .hero-subtext {
+        font-size: 14px;
+        max-width: 500px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .hero {
+        height: 80vh;
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.4;
+    }
+
+    .hero h2.company-name {
+        font-size: 28px;
+    }
+
+    .hero h2.tagline {
+        font-size: 22px;
+    }
+
+    .hero-subtext {
+        font-size: 14px;
+        max-width: 90%;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h2.company-name {
+        font-size: 24px;
+    }
+
+    .hero h2.tagline {
+        font-size: 20px;
+    }
+
+    .hero-subtext {
+        font-size: 12px;
+        max-width: 85%;
+    }
+}
+/*-------------------------------------------------------------------*/
 /* About Section */
 .about {
     background-color: #FFD6D6;
@@ -242,6 +353,11 @@ body, html {
     font-size: 1.5em;
     font-weight: 600;
 }
+#retention-value {
+    font-size: 2.5em !important; /* Decreased from 2em */
+    font-weight: 600 !important; /* Decreased from 900 */
+    margin-right: 4px;
+}
 
 /* Center Progress Circle */
 .progress-container {
@@ -287,7 +403,7 @@ body, html {
     color: white;
     margin: 0;
     top: 40%;
-    right: 20px;
+    right: 15px;
 }
 
 /* Animation for stroke-dashoffset */
@@ -824,7 +940,5 @@ body, html {
         font-size: 2em;
     }
 }
-
-
 
 
