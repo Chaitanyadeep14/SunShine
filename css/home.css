@@ -11,6 +11,8 @@ body, html {
 
 /* Hero Section */
 .hero {
+    margin-top: 55px;
+
     position: relative;
     width: 100vw;
     height: 100vh;
