@@ -151,18 +151,79 @@ a {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.about-image img,
-.founder-image img,
-.vision-images img,
+/* Default Styles (for Large Screens) */
+.about-image, .founder-image, .vision-images, .innovation-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img, 
+.founder-image img, 
+.vision-images img, 
 .innovation-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    margin: auto auto;
     border-radius: 5px;
-
 }
+
+/* 📍 Medium Screens (Tablets: 1024px & 768px) */
+@media (max-width: 1024px) {
+    .about-image, .founder-image, .vision-images, .innovation-image {
+        height: 350px; /* Reduce height slightly */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-image, .founder-image, .vision-images, .innovation-image {
+        height: 300px;
+    }
+
+    .about-image img, 
+    .founder-image img, 
+    .vision-images img, 
+    .innovation-image img {
+        object-fit: contain; /* Prevent cropping on small screens */
+    }
+}
+
+/* 📍 Small Screens (Phones: ≤ 670px) */
+@media (max-width: 670px) {
+    .about-image, .founder-image, .vision-images, .innovation-image {
+        height: auto; /* Allow height to adjust dynamically */
+        max-height: 280px;
+    }
+
+    .about-image img, 
+    .founder-image img, 
+    .vision-images img, 
+    .innovation-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* 📍 Extra Small Screens (≤ 460px) */
+@media (max-width: 460px) {
+    .about-image, .founder-image, .vision-images, .innovation-image {
+        height: auto;
+        max-height: 250px;
+    }
+
+    .about-image img, 
+    .founder-image img, 
+    .vision-images img, 
+    .innovation-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .about-image {
     position: relative;
     width: 100%;
@@ -174,7 +235,7 @@ a {
 .about-image img {
     height: 100%;
     width: auto;
-    object-fit: cover; /* Ensures the image scales properly within the fixed height */
+    object-fit:cover; /* Ensures the image scales properly within the fixed height */
 }
 
 /* Founder Section */
@@ -211,12 +272,69 @@ a {
     background-color: #fff;
 }
 
+/* 🌍 Default Styles (Large Screens) */
 .vision-images {
-    margin: auto auto;
-    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px; /* Fixed height */
     overflow: hidden;
-    margin-right: 50px;
 }
+
+.vision-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Prevents cropping */
+    display: block;
+}
+
+/* 📍 Medium Screens (1024px & 768px) */
+@media (max-width: 1024px) {
+    .vision-images {
+        height: 350px; /* Reduce height slightly */
+    }
+}
+
+@media (max-width: 768px) {
+    .vision-images {
+        height: auto; /* Allow height to adjust dynamically */
+        max-height: 300px;
+    }
+
+    .vision-images img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensures no cutting */
+    }
+}
+
+/* 📍 Small Screens (Phones: ≤ 670px) */
+@media (max-width: 670px) {
+    .vision-images {
+        height: auto;
+        max-height: 280px;
+    }
+
+    .vision-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* 📍 Extra Small Screens (≤ 460px) */
+@media (max-width: 460px) {
+    .vision-images {
+        height: auto;
+        max-height: 250px;
+    }
+
+    .vision-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 .vision-text h3 {
     font-family: 'Cabin', sans-serif;
@@ -225,10 +343,69 @@ a {
 }
 
 /* Innovation Section */
+/* 🌟 Full-Width Innovation Section */
 .innovation {
-    background-color: #fde4e4;
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background: url("../assets/sparkle_bg.png") no-repeat center center/cover;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 50px 10%;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 🔥 Transparent Overlay with #fde4e4 */
+.innovation::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(253, 228, 228, 0.0); /* Transparent overlay */
+    z-index: 0;
+}
+
+/* 📝 Innovation Content (Text Align Left) */
+.innovation-content {
+    max-width: 50%;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+/* 📷 Innovation Image */
+.innovation-image {
+    max-width: 40%;
+    position: relative;
+    z-index: 1;
+}
+
+/* 📍 Fix for Small Screens (Full Width) */
+@media (max-width: 768px) {
+    .innovation {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
+
+    .innovation-content {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .innovation-image {
+        max-width: 80%;
+        margin: 30px auto 0 auto; /* Adds space above the image */
+    }
+}
+
+/* 📍 Extra Small Screens (≤ 460px) */
+@media (max-width: 460px) {
+    .innovation-image {
+        max-width: 90%;
+        margin: 40px auto 0 auto; /* Adds more space above */
+    }
 }
 
 .innovation-content {
