@@ -233,6 +233,8 @@ body {
     height: auto;
 }
 
+/* EXISTING MEDIA QUERIES */
+
 @media (max-width: 1020px){
     .hero-text h1{
         font-size: 1.5rem;
@@ -284,7 +286,6 @@ body {
 }
 
 @media (max-width: 550px){
-
     .hero-text h1{
         font-size: 1.25rem;
     }
@@ -335,5 +336,239 @@ body {
 
     .quality-image img {
         max-width: 150px;
+    }
+}
+
+/* NEW ENHANCED MEDIA QUERIES */
+
+/* Enhanced filter navbar responsiveness for small tablets */
+@media (max-width: 650px) {
+    .filter-navbar {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        padding: 0px;
+    }
+    
+    .filter-link {
+        padding: 6px 12px;
+        font-size: 12px;
+        flex-basis: calc(33.33% - 10px);
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+        margin-top: 70px;
+    }
+    
+    .hero {
+        height: 250px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero-section {
+        padding: 20px 10px;
+    }
+    
+    .filter-link {
+        flex-basis: calc(50% - 8px);
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+    }
+    
+    .products {
+        padding: 20px 10px;
+    }
+    
+    .product-card {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .product-card img {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .quality-section {
+        padding: 20px 10px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    .filter-navbar {
+        flex-direction: column;
+        padding: 5px;
+    }
+    
+    .filter-link {
+        width: 100%;
+        margin-bottom: 4px;
+        font-size: 11px;
+        padding: 5px 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.1rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1rem;
+    }
+    
+    .hero-text ul {
+        padding-left: 20px;
+    }
+    
+    .product-card {
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+    }
+    
+    .product-card img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 5px;
+    }
+    
+    .hero {
+        height: 200px;
+    }
+}
+
+/* Medium to large tablets in landscape */
+@media (min-width: 800px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero {
+        height: 300px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .container {
+        margin-top: 80px;
+    }
+}
+
+/* Phone landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: 180px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    
+    .container {
+        margin-top: 60px;
+    }
+    
+    .hero-section {
+        padding: 15px;
+        margin-top: 10px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .products, .quality-section {
+        padding: 20px 15px;
+    }
+}
+
+/* Large desktops */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero {
+        height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 4em;
+    }
+    
+    .hero-section {
+        padding: 60px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.5rem;
+    }
+    
+    .hero-text ul li {
+        font-size: 1.5rem;
+    }
+    
+    .hero-image img {
+        max-width: 400px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .product-card {
+        width: 180px;
+        height: 180px;
+        transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* Fix for quality section on small displays */
+@media (max-width: 650px) {
+    .quality-description {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ensure all images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Improve accessibility for touch devices */
+@media (hover: none) {
+    .filter-link {
+        padding: 10px 20px; /* Larger touch target */
     }
 }
