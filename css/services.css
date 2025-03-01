@@ -22,8 +22,9 @@ body {
     border-radius: 50px;
     justify-content: space-between;
     border-bottom: 2px solid #ddd;
-    width: 100%;
+    width: 95%;
     border: 1px solid #FFD0D4;
+    margin: 0 auto;
 }
 
 .filter-link {
@@ -163,8 +164,9 @@ body {
     background: white;
     text-align: center;
     padding: 15px;
+    padding-bottom: 5px;
     width: 150px;
-    height: 150px;
+    height: fit-content;
     margin: 0 auto;
 }
 
@@ -456,7 +458,7 @@ body {
 }
 
 /* Medium to large tablets in landscape */
-@media (min-width: 800px) and (max-width: 1024px) and (orientation: landscape) {
+/* @media (min-width: 800px) and (max-width: 1024px) and (orientation: landscape) {
     .hero {
         height: 300px;
     }
@@ -468,7 +470,7 @@ body {
     .container {
         margin-top: 80px;
     }
-}
+} */
 
 /* Phone landscape orientation */
 @media (max-height: 500px) and (orientation: landscape) {
@@ -543,7 +545,7 @@ body {
     
     .product-card {
         width: 180px;
-        height: 180px;
+        height: 160px;
         transition: transform 0.3s ease;
     }
     
