@@ -1,11 +1,17 @@
+.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | SunShine Die Casting</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/services.css">
+    <!-- <link rel="stylesheet" href="css/die.css">
+    <link rel="stylesheet" href="css/lathe.css">
+    <link rel="stylesheet" href="css/drill.css">
+    <link rel="stylesheet" href="css/hydraulic.css"> -->
     <script src="js/components.js" defer></script>
     <script src="js/services.js" defer></script>
 </head>
@@ -21,16 +27,17 @@
     </section>
 
     <!-- Main Content -->
-            <div class="container">
-            <div class="filter-navbar">
-                <a href="#" class="filter-link" data-category="cnc-vnc">CNC & VNC</a>
-                <a href="#" class="filter-link" data-category="die-casting">Die Casting</a>
-                <a href="#" class="filter-link" data-category="lathe">Lathe</a>
-                <a href="#" class="filter-link" data-category="drill-tap">Drill & Tap</a>
-                <a href="#" class="filter-link" data-category="hydraulic-press">Hydraulic Press</a>
-            </div>
+    <div class="container">
+        <div class="filter-navbar">
+            <a href="#" class="filter-link active" data-category="cnc-vnc">CNC & VNC</a>
+            <a href="#" class="filter-link" data-category="die-casting">Die Casting</a>
+            <a href="#" class="filter-link" data-category="lathe">Lathe</a>
+            <a href="#" class="filter-link" data-category="drill-tap">Drill & Tap</a>
+            <a href="#" class="filter-link" data-category="hydraulic-press">Hydraulic Press</a>
+        </div>
         
-            <!-- Hero Section -->
+        <!-- CNC & VNC Section -->
+        <div class="service-content" id="cnc-vnc-content">
             <div class="hero-section">
                 <div class="hero-image">
                     <img src="https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2Fcnc.jpg?alt=media&token=9398b847-8034-4ac0-8be3-b2e87b7b87a3" alt="CNC Machine">
@@ -47,20 +54,103 @@
                     </ul>
                 </div>
             </div>
+        </div>
         
-            <!-- Products Section -->
-            <section class="products">
-                <h2>Browse Our <span>Products</span></h2>
-                <div id="product-list" class="product-grid"></div>
-            </section>
+        <!-- Die Casting Section -->
+        <div class="service-content" id="die-casting-content" style="display: none;">
+            <div class="hero-section">
+                <div class="hero-image">
+                    <img src="" alt="Die Casting">
+                </div>
+                <div class="hero-text">
+                    <h1>Strong <span class="highlight">Molds,</span></h1>
+                    <h2>Stronger <strong>Results.</strong></h2>
+                    <p>Die casting is a high-precision metal manufacturing process where molten metal is injected into a
+                        mold under high pressure to create strong, durable, and complex components with excellent surface
+                        finish.</p>
+                    <ul>
+                        <li><span>High Accuracy</span> - Produces intricate shapes with tight tolerances.</li>
+                        <li><span>Strength & Durability</span> - Ensures high structural integrity.</li>
+                        <li><span>Cost-Effective</span> - Ideal for mass production with minimal waste.</li>
+                        <li><span>Smooth Finish</span> - Reduces the need for additional machining.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         
-            <!-- Quality Section -->
-            <section class="quality-section">
-                <h2>Quality</h2>
-                <p>Make your work easier and faster!</p>
-                <h3>SUCCESS IS WHERE PREPARATION AND OPPORTUNITY MEET</h3>
-                <div class="quality-content">
-                    <div class="quality-description">
+        <!-- Lathe Section -->
+        <div class="service-content" id="lathe-content" style="display: none;">
+            <div class="hero-section">
+                <div class="hero-image">
+                    <img src="" alt="Lathe">
+                </div>
+                <div class="hero-text">
+                    <h1>Turning <span class="highlight">Ideas</span> into Reality </h1>
+                    <h2>with Precision <span class="highlight"> Lathes</span></h2>
+                    <p>At Sunshine Engineering Works, we utilize advanced lathe machines to manufacture custom precision components that meet industry standards. Lathe machining is a versatile metal shaping process where a workpiece rotates against a cutting tool to create cylindrical parts.</p>
+                    <ul>
+                        <li><span>High Accuracy</span> – Ideal for creating symmetrical parts.</li>
+                        <li><span>Versatile Applications</span> – Used in automotive and manufacturing.</li>
+                        <li><span>Smooth Finishing</span> – Ensures refined surface quality.</li>
+                        <li><span>Durable & Reliable</span> – Suitable for small and large-scale production.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Drill & Tap Section -->
+        <div class="service-content" id="drill-tap-content" style="display: none;">
+            <div class="hero-section">
+                <div class="hero-image">
+                    <img src="" alt="Drill & Tap">
+                </div>
+                <div class="hero-text">
+                    <h1>Drill with <span class="highlight">Accuracy,</span></h1>
+                    <h2>Tap with <strong>Strength</strong></h2>
+                    <p>Drilling and tapping are essential machining processes used to create precise holes and internal threads in metal and other materials. It removes material to form a hole, while tapping cuts threads inside the hole for screws and bolts.</p>
+                    <ul>
+                        <li><span>Precision Hole Creation</span> – Ensures accurate positioning and depth.</li>
+                        <li><span>Strong Threading</span> – Enhances assembly strength and durability.</li>
+                        <li><span>Versatile Applications</span> – Used in industrial manufacturing.</li>
+                        <li><span>High Efficiency</span> – Reduces machining time for mass production.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hydraulic Press Section -->
+        <div class="service-content" id="hydraulic-press-content" style="display: none;">
+            <div class="hero-section">
+                <div class="hero-image">
+                    <img src="" alt="Hydraulic Press">
+                </div>
+                <div class="hero-text">
+                    <h1>Shaping <span class="highlight">Strength</span> with </h1>
+                    <h2>Hydraulic <strong>Results.</strong></h2>
+                    <p>A hydraulic press is a high-power machine that uses hydraulic pressure to apply force for bending, forming, molding, and pressing metal components. It is widely used in automotive, aerospace, and heavy machinery industries for shaping and assembling parts.</p>
+                    <ul>
+                        <li><span>High Force Output</span> – Handles heavy-duty pressing with ease.</li>
+                        <li><span>Precision & Control</span> – Ensures uniform pressure for accurate shaping.</li>
+                        <li><span>Versatile Applications</span> – Used for metal forming and molding.</li>
+                        <li><span>Durability & Efficiency</span> – Reduces waste and improves productivity.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Products Section -->
+        <section class="products">
+            <h2>Browse Our <span>Products</span></h2>
+            <div id="product-list" class="product-grid"></div>
+        </section>
+        
+        <!-- Quality Section -->
+        <section class="quality-section">
+            <h2>Quality</h2>
+            <p>Make your work easier and faster!</p>
+            <h3>SUCCESS IS WHERE PREPARATION AND OPPORTUNITY MEET</h3>
+            <div class="quality-content">
+                <div class="quality-description">
                     <div class="quality-text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
                     </div>
@@ -68,10 +158,9 @@
                         <img src="https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FQuality-Control.jpg?alt=media&token=85a442db-83c0-43af-851a-cd28d41ac709" alt="Quality Control Diagram">
                     </div>
                 </div>
-                </div>
-            </section>
-        </div>
-        
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
     <div id="footer-container"></div>

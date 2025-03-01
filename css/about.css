@@ -385,7 +385,7 @@ a {
 /* 📍 Fix for Small Screens (Full Width) */
 @media (max-width: 768px) {
     .innovation {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 30px 5%;
     }
 
@@ -476,6 +476,12 @@ a {
     .innovation-content {
         max-width: 80%;
     }
+
+    .innovation-image img{
+        width: auto;
+        height: 200px;
+        width: auto;
+    }
     
 }
 
@@ -488,6 +494,7 @@ a {
 
     .innovation-image img{
         height: 200px;
+        margin-top: 20px;
         width: auto;
     }
 }
