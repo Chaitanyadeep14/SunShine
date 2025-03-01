@@ -1,20 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Load components
-    if (document.getElementById('navbar-container')) {
-        fetch('components/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-container').innerHTML = data;
-            });
-    }
-    
-    if (document.getElementById('footer-container')) {
-        fetch('components/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            });
-    }
 
     // Products data
     const products = [
