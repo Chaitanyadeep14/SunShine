@@ -216,7 +216,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const counters = document.querySelectorAll(".stat-value");
-            const speed = 130;
+            const speed = 100;
 
             counters.forEach(counter => {
                 const updateCount = () => {
@@ -226,7 +226,7 @@
 
                     if (count < target) {
                         counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 130);
+                        setTimeout(updateCount, 100);
                     } else {
                         counter.innerText = target;
                     }
