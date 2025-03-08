@@ -96,5 +96,22 @@ function toggleReadMore(contentId, linkElement) {
 }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".fade-in, .slide-in-left, .slide-in-right");
+
+    function handleScroll() {
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.8) {
+                el.classList.add("active");
+            } else {
+                el.classList.remove("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run once on page load
+});
 
 
