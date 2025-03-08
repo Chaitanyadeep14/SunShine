@@ -490,6 +490,9 @@ body, html {
     font-weight: normal;
 }
 
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
 /* Enquiry Button */
 .enquiry-btn {
     display: inline-block;
