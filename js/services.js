@@ -2,16 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Products data
     const products = [
-        { name: "Metal Manufacturing Equipment", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-1.jpg?alt=media&token=61fddef3-5426-44fd-8f95-fafd3258d566" },
-        { name: "Automotive Engine Parts", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-2.jpg?alt=media&token=bee9b18b-5f15-42a3-8ab3-eb5295d8557e" },
-        { name: "Precision Engineered Components", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-3.jpg?alt=media&token=b7eaafec-1446-4171-aa22-6e59689f3146" },
-        { name: "CNC Machine Components", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-4.jpg?alt=media&token=ab8b2518-dfcd-4cac-9daf-db24cfbc80c6" },
-        { name: "Precision Shaft", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-5.jpg?alt=media&token=864753b4-8e9a-4c39-821d-e995ed1a423e" },
-        { name: "Precision Tools", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-6.jpg?alt=media&token=c6d58ec6-f0c4-4f26-a0d2-e475ae702233" },
-        { name: "4mm Aluminium Gravity Die Castings", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-7.jpg?alt=media&token=5b43a395-a4f2-4bec-8af5-c267af354f13"},
-        { name: "Aluminium Universal Gravity Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-8.jpg?alt=media&token=2d0332f8-835f-4ca2-ae9c-cb0e22b69200"},
-        { name: "2mm Aluminium Gravity Die Castings", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-9.jpg?alt=media&token=e8e450d3-d567-4430-bef0-c879b9e85ada"},
-        { name: "Aluminium Pressure Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProduct-10.jpg?alt=media&token=46184816-86e6-4c49-9920-66f8997d5f87"}
+        { name: "15 Inch Aluminium Pressure Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-1.png?alt=media&token=c3688a9d-b5a7-4e52-be57-d0d8a2cebe57" },
+        { name: "Aluminum Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-2.png?alt=media&token=b6c1d101-7950-4b56-8b8a-0af3a57c7c1b" },
+        { name: "Cast Iron Roof Drain", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-3.png?alt=media&token=102de8b0-c5f5-4739-ba61-6dca3c180a75" },
+        { name: "Wax Die Mould", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-4.png?alt=media&token=d12e12a9-feb7-4c1e-8ec3-c3d9ad0b6d57" },
+        { name: "Pressure Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-5.png?alt=media&token=86f9f74c-6fdc-45df-a61a-5065b1058f86" },
+        { name: "Aluminium High Tension Clamp Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-6.png?alt=media&token=50774191-ad50-4bed-89c6-d0a883ffee71" },
+        { name: "Aluminium Pressure Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-7.png?alt=media&token=b5706c26-2e7d-4718-ae06-69b9d6bca050"},
+        { name: "Investment Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-8.png?alt=media&token=ab9017cc-4be0-4a9a-81a9-25921725ac09"},
+        { name: "Gravity Die Castings", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-9.png?alt=media&token=368e1447-7735-45ec-b2e6-4e950e6164d9"},
+        { name: "Aluminium Pressure Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-10.png?alt=media&token=99f85c7d-84d1-4de5-acae-7926fbddcc31"},
+        { name: "Aluminium Pressure Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-11.png?alt=media&token=8c3fb915-79d6-4c35-9417-a18051b31bf7"},
+        { name: "Gravity Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-12.png?alt=media&token=9309d7e4-bb98-4623-8c99-d058bbf03f07"}
+
     ];
 
     // Display products
