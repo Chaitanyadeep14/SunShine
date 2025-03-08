@@ -34,9 +34,9 @@
             <h2 class="section-title">About Us</h2>
             <p class="slide-in-left">
                 <strong>Sunshine Engineering Works</strong>, established in 2009 in Bangalore, India, specializes in 
-                precision engineering and die-making for <strong>automotive, aerospace, electronics, and 
-                industrial manufacturing</strong>. With a state-of-the-art facility and advanced 
-                <strong>CNC & VMC machines</strong>, we deliver high-quality machining solutions tailored to industry needs.
+                precision engineering and die-making for <strong>Automotive, Aerospace, Electronics, and 
+                Industrial Manufacturing</strong>. With a state-of-the-art facility and advanced 
+                <strong>CNC & VMC Machines</strong>, we deliver high-quality machining solutions tailored to industry needs.
             </p>
 
             <div class="stats-container">
@@ -216,7 +216,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const counters = document.querySelectorAll(".stat-value");
-            const speed = 50;
+            const speed = 130;
 
             counters.forEach(counter => {
                 const updateCount = () => {
@@ -226,7 +226,7 @@
 
                     if (count < target) {
                         counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 30);
+                        setTimeout(updateCount, 130);
                     } else {
                         counter.innerText = target;
                     }
