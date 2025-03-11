@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // Products data
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Gravity Die Casting", image: "https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2FProducts%2FProduct-12.png?alt=media&token=9309d7e4-bb98-4623-8c99-d058bbf03f07"}
 
     ];
+
 
     // Display products
     const productList = document.getElementById("product-list");

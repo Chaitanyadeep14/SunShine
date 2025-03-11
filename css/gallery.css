@@ -122,3 +122,21 @@ body {
         max-height: 300px;
     }
 }
+.team {
+    margin-bottom: 0 !important; 
+    padding-bottom: 0 !important;
+}
+
+.team img {
+    display: block; /* Removes inline spacing */
+    margin: 10px auto 0; /* Ensures consistent spacing */
+}
+
+.team img:last-child {
+    margin-bottom: 15px !important; /* Ensures no extra spacing below the last image */
+}
+
+main {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
