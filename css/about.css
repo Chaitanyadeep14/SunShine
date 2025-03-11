@@ -40,6 +40,7 @@ a {
     background: url("https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FAbout%2Fabout_hero.jpg?alt=media&token=51c43dfc-f81f-46f2-a658-25eee280768b") no-repeat center center/cover;
     position: relative;
     box-sizing: border-box;
+    max-height: 300px;
 }
 
 .hero::before {

@@ -201,6 +201,8 @@ html, body {
     background: url("https://firebasestorage.googleapis.com/v0/b/storage-bbd27.firebasestorage.app/o/Website%20Storage%2FServices%2Fservices_hero.jpg?alt=media&token=039f5693-ae7a-4777-8d67-f40f2dd55fcf") no-repeat center center/cover;
     position: relative;
     box-sizing: border-box;
+    max-height: 300px;
+
 }
 
 .hero::before {
