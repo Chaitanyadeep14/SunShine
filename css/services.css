@@ -1,8 +1,11 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
+    overflow-x: hidden;
+
 }
 
 /* Container */
@@ -12,6 +15,7 @@ body {
     padding: 0 20px;
     margin-top: 100px;
     background-color: #fff;
+
 }
 
 /* Filter Navbar */
@@ -47,6 +51,140 @@ body {
 .filter-link.active {
     background-color: #A3030E;
     color: white;
+}
+/* Prevent horizontal scrolling */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure all sections fit within the viewport */
+.container, .hero, .filter-navbar, .product-grid, .quality-section {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Fix the filter navbar responsiveness */
+@media (max-width: 650px) {
+    .filter-navbar {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        padding-top: 10px;
+        width: 100%; /* Ensure it does not exceed the screen */
+        box-sizing: border-box; /* Prevent extra width issues */
+    }
+    
+    .filter-link {
+        padding: 6px 12px;
+        font-size: 12px;
+        flex-basis: calc(33.33% - 10px);
+        text-align: center;
+        margin-bottom: 5px;
+        white-space: nowrap; /* Prevent breaking into multiple lines */
+    }
+}
+
+/* Fix extra space on very small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+        margin-top: 70px;
+    }
+    
+    .hero {
+        height: 250px;
+        width: 100%; /* Ensuring full width */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero-section {
+        padding: 20px 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .filter-link {
+        flex-basis: calc(50% - 8px);
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .products {
+        padding: 20px 10px;
+    }
+    
+    .product-card {
+        width: 140px;
+        height: 160px;
+    }
+    
+    .product-card img {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .quality-section {
+        padding: 20px 10px;
+    }
+}
+
+/* Fix filter navbar wrapping on very small devices */
+@media (max-width: 380px) {
+    .filter-navbar {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .filter-link {
+        width: 100%;
+        margin-bottom: 4px;
+        font-size: 11px;
+        padding: 5px 0;
+    }
+}
+
+/* Fix potential overflow in landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: 180px;
+        width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    
+    .container {
+        margin-top: 60px;
+    }
+    
+    .hero-section {
+        padding: 15px;
+        margin-top: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .products, .quality-section {
+        padding: 20px 15px;
+        width: 100%;
+    }
 }
 
 /* ============================
