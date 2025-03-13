@@ -249,6 +249,25 @@ a {
     object-fit: contain; /* Ensures the full image is visible */
     display: block;
 }
+/* Extra Large screens (Widescreen Monitors & 4K Displays) */
+@media (min-width: 1600px) {
+    .about-image img {
+        max-width: 800px; /* Increases the image size for large monitors */
+    }
+}
+
+@media (min-width: 1920px) {
+    .about-image img {
+        max-width: 900px; /* Further increase for 4K displays */
+    }
+}
+
+/* Ultra-wide screens (2560px and above) */
+@media (min-width: 2560px) {
+    .about-image img {
+        max-width: 1000px; /* Ensures it scales appropriately */
+    }
+}
 
 /* Large screens (Desktops & Laptops) */
 @media (min-width: 1200px) {
