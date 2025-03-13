@@ -547,3 +547,79 @@ a {
         width: auto;
     }
 }
+
+/* Default styling for large screens (Desktops) */
+.innovation-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+}
+
+/* Large Screens (1440px and above, large desktops) */
+@media (min-width: 1440px) {
+    .innovation-content {
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    .innovation-image img {
+        max-width: 650px;
+    }
+}
+
+/* Medium Screens (Laptops, Tablets - 1024px and below) */
+@media (max-width: 1024px) {
+    .innovation-content {
+        text-align: center;
+    }
+    
+    .innovation-image img {
+        max-width: 500px;
+    }
+}
+
+/* Small Screens (Tablets - 768px and below) */
+@media (max-width: 768px) {
+    .innovation-content {
+        text-align: center;
+    }
+
+    .innovation-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .innovation-image img {
+        max-width: 450px;
+    }
+}
+
+/* Extra Small Screens (Mobile - 480px and below) */
+@media (max-width: 480px) {
+    .innovation-content {
+        text-align: center;
+    }
+
+    .innovation-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .innovation-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Ultra Small Screens (320px and below, very small mobiles) */
+@media (max-width: 320px) {
+    .innovation-content {
+        text-align: center;
+    }
+
+    .innovation-image img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
